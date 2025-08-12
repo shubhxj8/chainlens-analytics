@@ -77,6 +77,43 @@ Guided by exploration findings, cleaning was performed systematically as follows
 - **Delivery performance by geography:** Analyzes regional variation in on-time delivery rates, surfacing logistics strengths and opportunities for process improvement.
 - **Clear interpretations and recommendations:** Each geographic cut is paired with markdown insights, helping set priorities for resource allocation, logistics investments, and targeted strategies.
 
+--- 
+
+## Customer Analytics
+
+### RFM Score Distribution and Segment Insights
+
+- **What it shows:** The distribution of customers by RFM score combinations (e.g., "111", "224", "344"), where each digit represents Recency, Frequency, and Monetary scores respectively (1 = lowest, 4 = highest).
+- **Interpretation:** Customer counts are concentrated in mid- to high-RFM score segments such as "411" (4,132 customers), "312" (1,599), "244" (1,744), and "233" (1,109). This indicates that many customers have purchased recently, purchase frequently, and spend relatively more. The diverse spread of scores reflects a varied customer base with loyal, valuable segments and those needing targeted engagement.
+
+---
+
+### High-Value Customers (CLV Analysis)
+
+- **What it shows:** Listing of top customers by Customer Lifetime Value (CLV), along with their RFM-based segment labels such as "Best Customers" and "Loyal Customers".
+- **Interpretation:** The highest CLV customers belong mostly to the "Best Customers" and "Loyal Customers" groups, with values exceeding 8,700 to over 10,500. These customers are highly valuable due to frequent and substantial purchases, warranting prioritized retention and personalized marketing efforts.
+
+---
+
+### Customer Segment Recommendations and Actionable Insights
+
+- **What it shows:** Sample customer records with segment classification, CLV, and tailored marketing recommendations based on segment behaviour.
+- **Interpretation:** 
+  - "Best Customers" should be engaged with loyalty programs and personalized offers to sustain high purchase activity.
+  - "At Risk" customers require reactivation campaigns and targeted incentives to win back their business.
+  - "Loyal Customers" present opportunities for referrals and upselling initiatives.
+  - "Others" benefit from customized marketing, inventory, and customer service strategies.
+- **Actionable takeaway:** Segment-specific marketing and operational strategies can enhance overall customer lifetime value, retention, and acquisition efficiency.
+
+---
+
+### Summary Recommendations
+
+- Prioritize retention programs and exclusive offers for "Best Customers" to maintain engagement.
+- Deploy win-back and reactivation campaigns focused on "At Risk" customers.
+- Promote referral and upsell strategies among "Loyal Customers".
+- Customize broader marketing and service strategies using detailed segment insights to improve effectiveness.
+
 ---
 
 ## How to Reproduce
@@ -85,6 +122,7 @@ Guided by exploration findings, cleaning was performed systematically as follows
 2. Open `01_Data_Exploration.ipynb` to view the EDA process and findings.
 3. Open `02_Data_Cleaning.ipynb` for step-by-step cleaning and preprocessing logic.
 4. Cleaned data is saved as `supply_chain_data_cleaned.csv` ready for use in future notebooks.
-5. Open 03_EDA_Analysis.ipynb for advanced exploratory data analysis, including statistical relationships and visualizations.
-6. Open 04_KPI_Dashboard.ipynb to analyze key performance indicators (KPIs) like monthly sales, order volumes, profitability, and delivery rates through interactive charts and business insights.
-7. Open 05_Geographic_Analysis.ipynb for in-depth geographic breakdowns of sales, orders, profit, and delivery performance by country, state, and city, along with interactive geographic visualizations and strategic interpretations.
+5. Open `03_EDA_Analysis.ipynb` for advanced exploratory data analysis, including statistical relationships and visualizations.
+6. Open `04_KPI_Dashboard.ipynb` to analyze key performance indicators (KPIs) like monthly sales, order volumes, profitability, and delivery rates through interactive charts and business insights.
+7. Open `05_Geographic_Analysis.ipynb` for in-depth geographic breakdowns of sales, orders, profit, and delivery performance by country, state, and city, along with interactive geographic visualizations and strategic interpretations.
+8. `06_Customer_Analytics.ipynb` for customer behavior segmentation, RFM analysis, lifetime value calculation, and targeted recommendations.
