@@ -116,6 +116,17 @@ Guided by exploration findings, cleaning was performed systematically as follows
 
 ---
 
+## Delivery Performance
+
+- Definition of on-time delivery flag from delivery status.
+- Calculation of overall and segmented on-time delivery rates.
+- Geographic analysis of delivery reliability by state.
+- Delivery delay pattern analysis via delivery lag days.
+- Monthly trends in on-time delivery rates.
+- Visualizations with enhanced styling for clarity and presentation.
+
+---
+
 ## How to Reproduce
 
 1. Clone this repo
@@ -126,3 +137,6 @@ Guided by exploration findings, cleaning was performed systematically as follows
 6. Open `04_KPI_Dashboard.ipynb` to analyze key performance indicators (KPIs) like monthly sales, order volumes, profitability, and delivery rates through interactive charts and business insights.
 7. Open `05_Geographic_Analysis.ipynb` for in-depth geographic breakdowns of sales, orders, profit, and delivery performance by country, state, and city, along with interactive geographic visualizations and strategic interpretations.
 8. `06_Customer_Analytics.ipynb` for customer behavior segmentation, RFM analysis, lifetime value calculation, and targeted recommendations.
+9. Open `07_Delivery_Performance.ipynb` to examine delivery timeliness and logistics performance.
+10. Run the code cells in each notebook sequentially to reproduce the analyses exactly.
+11. Modify file paths or parameters as needed to match your environment or dataset.
