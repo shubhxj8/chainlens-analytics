@@ -48,16 +48,7 @@ Guided by exploration findings, cleaning was performed systematically as follows
 ---
 
 ## Exploratory Data Analysis (EDA)
-
-### 01_Data_Exploration.ipynb  
-- Initial overview of data distributions, missing values, uniqueness, duplicates, and outlier detection.  
-- Generated summary statistics and initial plots to understand the dataset features.
-
-### 02_Data_Cleaning.ipynb  
-- Step-by-step cleaning process including dropping unusable columns, handling missing data, correcting data types, and removing PII.  
-- Finalized and saved the clean dataset for further analysis.
-
-### 03_EDA_Analysis.ipynb  
+ 
 - Advanced exploratory analysis including:  
   - Correlation heatmaps with detailed annotations and interpretations.  
   - Scatter plots illustrating relationships between key numerical variables.  
@@ -65,7 +56,35 @@ Guided by exploration findings, cleaning was performed systematically as follows
   - Time series trend visualization and optional geographic or business driver analyses (if applicable).  
 - Focused on revealing business insights and patterns to inform further modeling or reporting.
 
+
+---
+
+## KPI Dashboard
+
+- **Comprehensive KPI dashboard** tracking core supply chain metrics: total sales, order volume, average order value (AOV), profit per order, and on-time delivery rates.
+- **Monthly time-series analysis:** Resamples data by month to reveal trends, seasonality, and inflection points in business health.
+- **Detailed visualizations:** Includes multi-metric line/bar combinations and focused KPI plots for each business driver.
+- **Interpretations for each KPI:** Every chart is paired with actionable business insights, highlighting trends, anomalies, and operational risks (such as consistently low on-time delivery).
+- **Ready for decision-making:** Provides executives and managers with an at-a-glance view of business performance and areas for operational improvement.
+
+---
+
+## Geographic Analysis
+
+- **In-depth regional analysis:** Breaks down sales, order volumes, net benefit, and customer counts by country, state, and city.
+- **State and city focus:** Since only two customer countries are present, drills down to identify high-value and high-volume states (e.g., Puerto Rico as a major outlier) and top-performing cities (like Caguas, Chicago, and Los Angeles).
+- **Interactive mapping:** Visualizes the top sales cities with a spatial (folium) map to quickly identify revenue clusters and potential distribution hubs.
+- **Delivery performance by geography:** Analyzes regional variation in on-time delivery rates, surfacing logistics strengths and opportunities for process improvement.
+- **Clear interpretations and recommendations:** Each geographic cut is paired with markdown insights, helping set priorities for resource allocation, logistics investments, and targeted strategies.
+
 ---
 
 ## How to Reproduce
 
+1. Clone this repo
+2. Open `01_Data_Exploration.ipynb` to view the EDA process and findings.
+3. Open `02_Data_Cleaning.ipynb` for step-by-step cleaning and preprocessing logic.
+4. Cleaned data is saved as `supply_chain_data_cleaned.csv` ready for use in future notebooks.
+5. Open 03_EDA_Analysis.ipynb for advanced exploratory data analysis, including statistical relationships and visualizations.
+6. Open 04_KPI_Dashboard.ipynb to analyze key performance indicators (KPIs) like monthly sales, order volumes, profitability, and delivery rates through interactive charts and business insights.
+7. Open 05_Geographic_Analysis.ipynb for in-depth geographic breakdowns of sales, orders, profit, and delivery performance by country, state, and city, along with interactive geographic visualizations and strategic interpretations.
