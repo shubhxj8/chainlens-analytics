@@ -14,44 +14,58 @@ A comprehensive analysis and cleaning of a large supply chain dataset, focusing 
 
 ## Data Exploration
 
-We started by exploring the dataset to understand its structure, discover problems, and inform cleaning strategies:
+We started by exploring the dataset to understand its structure, discover issues, and inform cleaning strategies:
 
 - **Structure check:** Previewed first and last few rows to confirm correct data load and formatting.
-- **Column types:** Reviewed data types—most were suitable, but some (like date fields) needed conversion.
+- **Column types:** Reviewed data types — most were suitable, but some (like date fields) required conversion.
 - **Missing values:** Identified columns with missing data. Notably, `Product Description` was entirely empty, and fields like `Order Zipcode` had a high proportion of nulls.
 - **Unique values and IDs:** Assessed uniqueness to distinguish identifier, categorical, and text columns.
-- **Duplicates:** Confirmed there were no exact duplicate rows.
-- **Outliers:** Detected significant outliers in key numeric columns (`Benefit per order`, `Sales per customer`, `Order Item Total`, `Order Profit Per Order`) using summary stats and visualizations. For example:
-    - Nearly 19,000 outliers in profit/loss fields
-    - Around 2,000 outliers in sales/order totals
-- **Key findings:** The dataset is rich in detail but contains irrelevant, empty, or privacy-sensitive columns and requires cleaning.
+- **Duplicates:** Confirmed no exact duplicate rows were present.
+- **Outliers:** Detected significant outliers in key numeric columns (`Benefit per order`, `Sales per customer`, `Order Item Total`, `Order Profit Per Order`) using summary statistics and visualizations. For example:
+  - Nearly 19,000 outliers in profit/loss related fields.
+  - Around 2,000 outliers in sales/order totals.
+- **Key findings:** The dataset is rich and detailed but contains irrelevant, empty, or privacy-sensitive columns that require cleaning.
 
 ---
 
 ## Data Cleaning & Preprocessing
 
-Guided by the exploration step, we performed systematic cleaning as follows:
+Guided by exploration findings, cleaning was performed systematically as follows:
 
-- **Dropped empty/constant columns:** Removed `Product Description` and others with only one unique value.
+- **Dropped empty/constant columns:** Removed columns like `Product Description` and others with only one unique value.
 - **Handled missing data:** 
-    - Dropped columns or rows with excessive or critical missing data, such as `Customer Lname` (few missing) and `Order Zipcode` (mostly missing, so dropped).
+  - Dropped columns or rows with excessive or critical missing data (e.g., `Customer Lname` with a few missing rows, `Order Zipcode` mostly missing so dropped).
 - **Data type correction:** 
-    - Converted string dates to `datetime` (for easier time-based analysis)
-    - Changed business categories (like segment, delivery status) to categorical types
+  - Converted string date columns to `datetime` for easier time-based analysis.
+  - Changed business categories (like `Customer Segment`, `Delivery Status`) to categorical data types.
 - **Privacy protection:** 
-    - Removed columns like `Customer Email`, `Customer Password`, names, and addresses to ensure no personally identifiable information (PII) is included.
+  - Removed personally identifiable information (PII) columns such as `Customer Email`, `Customer Password`, names, and addresses.
 - **Index reset:** 
-    - After row/column drops, reset row numbering for a clean DataFrame.
+  - After row and column removals, reset row numbering for a clean DataFrame.
 - **Saved cleaned data:** 
-    - Created a new, analysis-ready CSV for further work.
+  - Created a new analysis-ready CSV file (`supply_chain_data_cleaned.csv`) for downstream analysis.
 
 ---
 
+## Exploratory Data Analysis (EDA)
+
+### 01_Data_Exploration.ipynb  
+- Initial overview of data distributions, missing values, uniqueness, duplicates, and outlier detection.  
+- Generated summary statistics and initial plots to understand the dataset features.
+
+### 02_Data_Cleaning.ipynb  
+- Step-by-step cleaning process including dropping unusable columns, handling missing data, correcting data types, and removing PII.  
+- Finalized and saved the clean dataset for further analysis.
+
+### 03_EDA_Analysis.ipynb  
+- Advanced exploratory analysis including:  
+  - Correlation heatmaps with detailed annotations and interpretations.  
+  - Scatter plots illustrating relationships between key numerical variables.  
+  - Box plots comparing distributions of numeric variables across categorical groups.  
+  - Time series trend visualization and optional geographic or business driver analyses (if applicable).  
+- Focused on revealing business insights and patterns to inform further modeling or reporting.
+
+---
 
 ## How to Reproduce
-
-1. Clone this repo
-2. Open `01_Data_Exploration.ipynb` to view the EDA process and findings.
-3. Open `02_Data_Cleaning.ipynb` for step-by-step cleaning and preprocessing logic.
-4. Cleaned data is saved as `supply_chain_data_cleaned.csv` ready for use in future notebooks.
 
