@@ -6,7 +6,7 @@ A comprehensive analysis and cleaning of a large supply chain dataset, focusing 
 
 ## Dataset
 
-- **Source:** (Insert dataset source, e.g., company database, Kaggle, UCI, etc.)
+- **Source:** Mendeley Data
 - **Size:** 180,519 rows × 53 columns
 - **Contents:** Detailed records on orders, products, customer details, delivery dates, and financial metrics.
 
